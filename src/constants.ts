@@ -35,6 +35,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const PROJECTS = [
   {
     title: "Home Alone",
+    alt: "Still from Home Alone, a short film directed and shot by Langford K. Quarshie featuring a lone character being stalked by someone hiding in his bedroom",
     category: "Short Film",
     year: "2026",
     url: "https://www.instagram.com/p/DbidhtIghcD/",
@@ -42,6 +43,7 @@ export const PROJECTS = [
   },
   {
     title: "Burning Man",
+    alt: "Cinematic still from Burning Man, a psychological short film directed by Langford K. Quarshie with a man standing over a burning fire",
     category: "Short Film",
     year: "2026",
     url: "https://www.instagram.com/p/Dakvvi9gEhL",
@@ -49,9 +51,12 @@ export const PROJECTS = [
   },
   {
     title: "In The Night",
+    alt: "Nighttime cinematic frame from In The Night, a visual postcard by filmmaker Langford K. Quarshie exploring mood, light, and atmosphere.",
     category: "Post Card",
     year: "2026",
     url: "https://www.instagram.com/p/Da8lfoHskgm/",
     image: "/stills/night.png",
   },
 ];
+
+export const SITE_URL = "https://langford-film-www.vercel.app";

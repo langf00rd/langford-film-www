@@ -1,5 +1,3 @@
-"use client";
-
 import HeroBg from "@/components/hero-bg";
 import { Nav } from "@/components/layout/nav";
 import { Section } from "@/components/layout/section";
@@ -9,15 +7,62 @@ import {
   EMAIL,
   INSTAGRAM_LINK,
   PROJECTS,
+  SITE_URL,
   SPEC_ROWS,
   YOUTUBE_LINK,
 } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Langford K. Quarshie | Film Director & Cinematographer",
+  description:
+    "Portfolio of Langford K. Quarshie, a Ghanaian film director and cinematographer creating music videos, documentaries, commercials, branded films, and short films.",
+  keywords: [
+    "Langford K. Quarshie",
+    "Film Director Ghana",
+    "Cinematographer Ghana",
+    "Music Video Director",
+    "Commercial Director",
+    "Documentary Filmmaker",
+    "Filmmaker Accra",
+    "Director of Photography",
+    "Creative Director Ghana",
+  ],
+  authors: [{ name: "Langford K. Quarshie" }],
+  creator: "Langford K. Quarshie",
+  openGraph: {
+    title: "Langford K. Quarshie | Film Director & Cinematographer",
+    description:
+      "Portfolio showcasing films, music videos, documentaries, and commercial work.",
+    type: "website",
+  },
+};
+
 export default function FilmmakerPortfolio() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Langford K. Quarshie",
+            jobTitle: "Film Director",
+            // image: `${SITE_URL}/portrait.jpg`,
+            url: `${SITE_URL}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Accra",
+              addressCountry: "GH",
+            },
+            sameAs: [INSTAGRAM_LINK, YOUTUBE_LINK],
+          }),
+        }}
+      />
       <HeroBg />
       <Section className="flex flex-col justify-between">
         <div>
@@ -34,9 +79,9 @@ export default function FilmmakerPortfolio() {
             <SpecsList rows={SPEC_ROWS} />
           </div>
           <p className="max-w-2xl leading-[1.7] xl:text-xl text-white/70 xl:absolute bottom-10 left-18">
-            I create stories that explore the emotional, the unexpected, and
-            everything in between — from intimate human moments to worlds that
-            exist beyond reality.
+            I direct and shoot film, music videos, documentaries, and
+            commercials, creating emotionally driven stories that blur the line
+            between reality and imagination.
           </p>
         </div>
       </Section>
@@ -78,34 +123,35 @@ export default function FilmmakerPortfolio() {
           <Title underline>ABOUT ME</Title>
           <div className="mt-12 max-w-3xl space-y-8 text-lg leading-relaxed text-white/80">
             <p>
-              I&apos;m Langford K. Quarshie, a filmmaker and cinematographer
-              fascinated by the relationship between reality, emotion, and
-              imagination.
+              I&apos;m Langford K. Quarshie, a film director and cinematographer
+              based in Accra, Ghana. I create music videos, documentaries,
+              commercials, branded films, and narrative projects that explore
+              emotion, psychology, and imagination.
             </p>
 
             <p>
-              My approach is rooted in visual storytelling — using composition,
-              movement, light, and sound to transform ordinary moments into
-              cinematic experiences.
+              My work combines thoughtful cinematography, intentional camera
+              movement, lighting, and sound to build visually compelling stories
+              across commercial and narrative filmmaking.
             </p>
 
             <p>
-              From music videos and documentaries to branded films and short
-              narratives, I collaborate with artists, brands, and individuals to
-              create work that feels intentional, honest, and unforgettable.
+              I collaborate with artists, brands, agencies, and production teams
+              to develop films that are both emotionally engaging and visually
+              distinctive.
             </p>
           </div>
         </div>
       </Section>
 
       <Section id="contact">
-        <Title underline>HIT ME UP!</Title>
+        <Title underline>WORK WITH ME!</Title>
 
         <div className="mt-12 max-w-2xl">
           <p className="text-xl text-white/70 leading-relaxed">
             Have a story, idea, or vision you want to bring to life? I&apos;m
-            available for film direction, cinematography, music videos,
-            documentaries, and cinematic brand projects.
+            available for music videos, commercials, brand films, documentaries,
+            short films, cinematography, creative direction
           </p>
           <div className="mt-12 flex flex-col gap-4">
             <Link
