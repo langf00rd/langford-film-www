@@ -29,11 +29,11 @@ export default function FilmmakerPortfolio() {
           </h3>
         </div>
         <Nav />
-        <div className="space-y-10 md:space-y-0">
-          <div className="w-full max-w-135 md:absolute bottom-10 right-38 mt-20">
+        <div className="space-y-10 xl:space-y-0">
+          <div className="w-full max-w-135 xl:absolute bottom-10 right-38 mt-20">
             <SpecsList rows={SPEC_ROWS} />
           </div>
-          <p className="max-w-2xl leading-[1.7] md:text-xl text-white/70 md:absolute bottom-10 left-18">
+          <p className="max-w-2xl leading-[1.7] xl:text-xl text-white/70 xl:absolute bottom-10 left-18">
             I create stories that explore the emotional, the unexpected, and
             everything in between — from intimate human moments to worlds that
             exist beyond reality.
