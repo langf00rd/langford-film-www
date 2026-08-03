@@ -5,7 +5,14 @@ import { Nav } from "@/components/layout/nav";
 import { Section } from "@/components/layout/section";
 import { SpecsList } from "@/components/specs";
 import { Title } from "@/components/typography/title";
-import { EMAIL, INSTAGRAM_LINK, SPEC_ROWS, YOUTUBE_LINK } from "@/constants";
+import {
+  EMAIL,
+  INSTAGRAM_LINK,
+  PROJECTS,
+  SPEC_ROWS,
+  YOUTUBE_LINK,
+} from "@/constants";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function FilmmakerPortfolio() {
@@ -30,47 +37,31 @@ export default function FilmmakerPortfolio() {
       <Section id="works">
         <Title underline>MY WORKS</Title>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              title: "Music Videos",
-              description:
-                "Visually driven narratives crafted for artists and labels.",
-            },
-            {
-              title: "Commercials",
-              description:
-                "Brand films focused on storytelling and striking imagery.",
-            },
-            {
-              title: "Documentaries",
-              description:
-                "Human-centered stories with an authentic cinematic approach.",
-            },
-            {
-              title: "Short Films",
-              description:
-                "Original scripted films exploring compelling narratives.",
-            },
-            {
-              title: "Behind the Scenes",
-              description:
-                "Production moments and creative process documentation.",
-            },
-            {
-              title: "Photography",
-              description: "Portrait, editorial, and cinematic still imagery.",
-            },
-          ].map((item) => (
-            <article
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          {PROJECTS.map((item) => (
+            <Link
+              href={item.url}
+              target="_blank"
               key={item.title}
-              className="border border-white/20 p-6 backdrop-blur-sm transition hover:border-white"
+              className="block border border-white/20 p-3 backdrop-blur-sm transition hover:border-white"
             >
-              <h3 className="font-display text-3xl uppercase">{item.title}</h3>
-              <p className="mt-4 text-white/70 leading-relaxed">
-                {item.description}
-              </p>
-            </article>
+              <article>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover aspect-video"
+                  width={1920}
+                  height={1080}
+                />
+                <div className="mt-4 flex items-center justify-between">
+                  <h3 className="text-xl flex items-center gap-2 uppercase">
+                    <span className="h-5 block bg-primary w-1" />
+                    {item.title}
+                  </h3>
+                  <p className="opacity-60">{item.category}</p>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       </Section>
@@ -78,7 +69,6 @@ export default function FilmmakerPortfolio() {
       <Section id="about">
         <div>
           <Title underline>ABOUT ME</Title>
-
           <div className="mt-12 max-w-3xl space-y-8 text-lg leading-relaxed text-white/80">
             <p>
               I&apos;m Langford K. Quarshie, a filmmaker and cinematographer
@@ -138,7 +128,7 @@ export default function FilmmakerPortfolio() {
               href={`mailto:${EMAIL}`}
               className="text-3xl font-display uppercase hover:opacity-70"
             >
-              hello@example.com
+              {EMAIL}
             </Link>
 
             <Link

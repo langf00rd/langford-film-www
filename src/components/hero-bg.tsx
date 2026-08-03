@@ -19,7 +19,7 @@ export default function HeroBg() {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {STILLS.map((img, i) => (
         <Image
-          key={img.src}
+          key={i}
           src={img.src}
           alt={img.alt}
           fill
