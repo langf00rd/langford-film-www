@@ -14,12 +14,12 @@
   --color-primary: var(--primary);
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/
 
 body {
   background: var(--background);
@@ -29,12 +29,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-/*
-html {
-  scroll-snap-type: y proximity;
-}
-
-section {
-  scroll-snap-align: start;
-}*/
