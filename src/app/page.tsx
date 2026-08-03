@@ -27,7 +27,7 @@ export default function FilmmakerPortfolio() {
         </div>
       </Section>
 
-      <Section id="works" className="justify-center">
+      <Section id="works">
         <Title underline>MY WORKS</Title>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -75,13 +75,13 @@ export default function FilmmakerPortfolio() {
         </div>
       </Section>
 
-      <Section id="about" className="justify-between">
+      <Section id="about">
         <div>
           <Title underline>ABOUT ME</Title>
 
           <div className="mt-12 max-w-3xl space-y-8 text-lg leading-relaxed text-white/80">
             <p>
-              I'm Langford K. Quarshie, a filmmaker and cinematographer
+              I&apos;m Langford K. Quarshie, a filmmaker and cinematographer
               passionate about telling stories through thoughtful composition,
               movement, and light. Every frame is designed to evoke emotion
               while serving the narrative.
@@ -123,13 +123,13 @@ export default function FilmmakerPortfolio() {
         </div>
       </Section>
 
-      <Section id="contact" className="items-center justify-center text-center">
+      <Section id="contact">
         <Title underline>HIT ME UP</Title>
 
         <div className="mt-12 max-w-2xl">
           <p className="text-xl text-white/70 leading-relaxed">
             Looking for a director or cinematographer for your next film,
-            documentary, commercial, or music video? Let's create something
+            documentary, commercial, or music video? Let&apos;s create something
             memorable together.
           </p>
 
