@@ -2,6 +2,7 @@ import { SocialLink, SpecRow } from "./types";
 
 export const STILLS = [
   { src: "/stills/burning-man.png", alt: "", title: "Video #1" },
+  { src: "/stills/burning-man.png", alt: "", title: "Video #1" },
   { src: "/stills/oraimo.png", alt: "", title: "Video #2" },
   { src: "/stills/thriller.png", alt: "", title: "Video #3" },
   { src: "/stills/gridlock.png", alt: "", title: "Video #4" },
@@ -21,9 +22,11 @@ export const SPEC_ROWS: SpecRow[] = [
   { label: "Status", value: "Open For Work" },
 ];
 
-export const CONTACT_EMAIL = "langfordquarshie21@gmail.com";
+export const EMAIL = "langfordquarshie21@gmail.com";
+export const YOUTUBE_LINK = "https://www.youtube.com/@langford.mp4";
+export const INSTAGRAM_LINK = "https://www.instagram.com/langf00rd/";
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "Instagram", href: "https://www.instagram.com/langf00rd/" },
-  { label: "YouTube", href: "https://www.youtube.com/@langford.mp4" },
+  { label: "Instagram", href: INSTAGRAM_LINK },
+  { label: "YouTube", href: YOUTUBE_LINK },
 ];
