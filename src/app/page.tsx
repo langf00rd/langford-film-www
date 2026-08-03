@@ -19,25 +19,32 @@ export default function FilmmakerPortfolio() {
   return (
     <div>
       <HeroBg />
-      <Section>
+      <Section className="flex flex-col justify-between">
         <div>
           <Title>
             LANGFORD K. <br /> QUARSHIE
           </Title>
           <h3 className="uppercase tracking-wide opacity-80">
-            Director &amp; Cinematographer — Film / Music Video / Documentary
+            Film Director — Cinematographer — Visual Storyteller
           </h3>
         </div>
         <Nav />
-        <div className="w-full max-w-135 md:absolute bottom-10 left-18 mt-20">
-          <SpecsList rows={SPEC_ROWS} />
+        <div className="space-y-10 md:space-y-0">
+          <div className="w-full max-w-135 md:absolute bottom-10 right-38 mt-20">
+            <SpecsList rows={SPEC_ROWS} />
+          </div>
+          <p className="max-w-2xl leading-[1.7] md:text-xl text-white/70 md:absolute bottom-10 left-18">
+            I create stories that explore the emotional, the unexpected, and
+            everything in between — from intimate human moments to worlds that
+            exist beyond reality.
+          </p>
         </div>
       </Section>
 
       <Section id="works">
-        <Title underline>MY WORKS</Title>
+        <Title underline>SELECTED WORKS</Title>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
           {PROJECTS.map((item) => (
             <Link
               href={item.url}
@@ -72,57 +79,34 @@ export default function FilmmakerPortfolio() {
           <div className="mt-12 max-w-3xl space-y-8 text-lg leading-relaxed text-white/80">
             <p>
               I&apos;m Langford K. Quarshie, a filmmaker and cinematographer
-              passionate about telling stories through thoughtful composition,
-              movement, and light. Every frame is designed to evoke emotion
-              while serving the narrative.
+              fascinated by the relationship between reality, emotion, and
+              imagination.
             </p>
 
             <p>
-              My work spans music videos, documentaries, branded content, and
-              short films, collaborating with artists, agencies, and brands to
-              create cinematic visuals that leave a lasting impression.
+              My approach is rooted in visual storytelling — using composition,
+              movement, light, and sound to transform ordinary moments into
+              cinematic experiences.
             </p>
 
             <p>
-              Whether leading a production or operating the camera, I focus on
-              crafting imagery that feels intentional, immersive, and timeless.
+              From music videos and documentaries to branded films and short
+              narratives, I collaborate with artists, brands, and individuals to
+              create work that feels intentional, honest, and unforgettable.
             </p>
-          </div>
-        </div>
-
-        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div>
-            <h4 className="text-white/50 uppercase text-sm">Based</h4>
-            <p className="mt-2 text-xl">Ghana</p>
-          </div>
-
-          <div>
-            <h4 className="text-white/50 uppercase text-sm">Focus</h4>
-            <p className="mt-2 text-xl">Narrative</p>
-          </div>
-
-          <div>
-            <h4 className="text-white/50 uppercase text-sm">Genres</h4>
-            <p className="mt-2 text-xl">Film · Docs</p>
-          </div>
-
-          <div>
-            <h4 className="text-white/50 uppercase text-sm">Available</h4>
-            <p className="mt-2 text-xl">Worldwide</p>
           </div>
         </div>
       </Section>
 
       <Section id="contact">
-        <Title underline>HIT ME UP</Title>
+        <Title underline>HIT ME UP!</Title>
 
         <div className="mt-12 max-w-2xl">
           <p className="text-xl text-white/70 leading-relaxed">
-            Looking for a director or cinematographer for your next film,
-            documentary, commercial, or music video? Let&apos;s create something
-            memorable together.
+            Have a story, idea, or vision you want to bring to life? I&apos;m
+            available for film direction, cinematography, music videos,
+            documentaries, and cinematic brand projects.
           </p>
-
           <div className="mt-12 flex flex-col gap-4">
             <Link
               href={`mailto:${EMAIL}`}

@@ -7,7 +7,7 @@ export function Title({
 }) {
   return (
     <h1
-      className={`font-display relative text-[74px] md:text-[160px] w-full uppercase leading-[0.92] tracking-[-0.01em] ${underline && "border-b-[3px] left-1"}`}
+      className={`font-display relative text-[74px] md:text-[90px] lg:text-[160px] w-full uppercase leading-[0.92] tracking-[-0.01em] ${underline && "border-b-[3px] left-1"}`}
     >
       {children}
     </h1>
